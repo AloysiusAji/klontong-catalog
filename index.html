@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Warung Klontong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Katalog Daftar Harga Kios RPK Berkah Borobudur</h1>
+    
+    <!-- Search Bar -->
+    <input type="text" id="search" placeholder="Cari barang...">
+    <button onclick="searchItems()">Cari</button>
+    
+    <!-- Form Add Item -->
+    <h2>Tambah Barang Baru</h2>
+    <input type="text" id="name" placeholder="Nama Barang">
+    <input type="number" id="price" placeholder="Harga">
+    <button onclick="addItem()">Tambah</button>
+    
+    <!-- List Items -->
+    <h2>Daftar Barang</h2>
+    <ul id="itemList"></ul>
+    
+    <script src="script.js"></script>
+</body>
+</html>
