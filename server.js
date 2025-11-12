@@ -15,7 +15,7 @@ app.use(express.static('.'));
 // Koneksi ke MongoDB Atlas (ganti dengan connection string Anda)
 const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://aloysiusaji02_db_user:BdJRVCyHFxBObrDF@cluster0.qqa9imh.mongodb.net/klontong?appName=Cluster0';
 mongoose.connect(mongoURI)
-.then(() => console.log('Connected to MongoDB'))
+  .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Connection error:', err));
 
 // Schema untuk item (barang)
