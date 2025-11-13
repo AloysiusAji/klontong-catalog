@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Warung Klontong</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Katalog Warung Klontong</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { margin: 5px; padding: 8px; }
+    ul { list-style: none; padding: 0; }
+    li { background: #f4f4f4; margin: 5px 0; padding: 10px; display: flex; justify-content: space-between; }
+    button { cursor: pointer; margin-left: 5px; }
+    #search { width: 200px; }
+  </style>
 </head>
 <body>
-    <h1>Katalog Daftar Harga Kios RPK Berkah Borobudur</h1>
-    
-    <!-- Search Bar -->
-    <input type="text" id="search" placeholder="Cari barang...">
-    <button onclick="searchItems()">Cari</button>
-    
-    <!-- Form Add Item -->
-    <h2>Tambah Barang Baru</h2>
-    <input type="text" id="name" placeholder="Nama Barang">
-    <input type="number" id="price" placeholder="Harga">
-    <button onclick="addItem()">Tambah</button>
-    
-    <!-- List Items -->
-    <h2>Daftar Barang</h2>
-    <ul id="itemList"></ul>
-    
-    <script src="script.js"></script>
+
+  <h1>Katalog Daftar Harga Warung Klontong</h1>
+
+  <!-- Search Bar -->
+  <input type="text" id="search" placeholder="Cari barang..." />
+  <button onclick="searchItems()">Cari</button>
+
+  <!-- Form Tambah Barang -->
+  <h2>Tambah Barang Baru</h2>
+  <input type="text" id="name" placeholder="Nama Barang" />
+  <input type="number" id="price" placeholder="Harga" />
+  <button onclick="addItem()">Tambah</button>
+
+  <!-- List Barang -->
+  <h2>Daftar Barang</h2>
+  <ul id="itemList"></ul>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
 </body>
 </html>
