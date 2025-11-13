@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/items';
+const API_URL = 'https://klontong-catalog.vercel.app/api/items';
 
 // Load all items
 async function loadItems() {
