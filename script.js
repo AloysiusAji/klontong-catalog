@@ -45,7 +45,7 @@ function editItem(id, name, price) {
     const newName = prompt('Nama baru:', name);
     const newPrice = prompt('Harga baru:', price);
     if (newName && newPrice) {
-        fetch(`${API_URL}/${id}`, {
+        fetch(`https://klontong-catalog.vercel.app/api/items/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: newName, price: parseInt(newPrice) })
@@ -54,11 +54,17 @@ function editItem(id, name, price) {
 }
 
 // Delete item
-async function deleteItem(id) {
-    if (confirm('Yakin hapus?')) {
-        await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
-        loadItems();
-    }
+function deleteItem(id) {
+    // if (confirm('Yakin hapus?')) {
+    //     await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+    //     loadItems();
+    // }
+      fetch(`${API_URL}?id=${id}`, {
+    method: 'DELETE'
+  })
+  .then(res => res.json())
+  .then(() => loadItems())
+  .catch(console.error);
 }
 
 // Search items
