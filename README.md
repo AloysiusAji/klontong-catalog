@@ -1,1 +1,1 @@
-use mangodb and vercel
+mangodb and vercel
